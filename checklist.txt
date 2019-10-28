@@ -1,0 +1,39 @@
+Data exploration
+
+- [ ] Plot images
+- [ ] Scree plot analysis
+- [ ] PCA plot
+
+Visual search with k-NN
+
+- [ ] k-NN performance
+- [ ] 10 nearest neighbors
+
+Simple decision trees
+
+- [ ] Depth of 3
+- [ ] Plot tree
+- [ ] PCA as preprocessing
+
+Logistic regression baseline
+
+- [ ] Logreg performance
+- [ ] CVed grid search
+- [ ] Regularization and probs
+
+Nonlinear classifiers
+
+- [ ] RFs performance
+- [ ] Ensemble size effect
+- [ ] Linear, RBF SVMs
+
+Dense network
+
+- [ ] 1-layer
+- [ ] 2-layer
+
+Convolutional neural network
+
+- [ ] ConvNet performance
+- [ ] Describe results
+
