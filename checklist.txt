@@ -1,8 +1,8 @@
 Data exploration
 
-- [ ] Plot images
-- [ ] Scree plot analysis
-- [ ] PCA plot
+- [x] Plot images
+- [x] Scree plot analysis
+- [x] PCA plot
 
 Visual search with k-NN
 
