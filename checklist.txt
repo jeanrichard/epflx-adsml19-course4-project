@@ -6,14 +6,14 @@ Data exploration
 
 Visual search with k-NN
 
-- [ ] k-NN performance
-- [ ] 10 nearest neighbors
+- [x] k-NN performance
+- [x] 10 nearest neighbors
 
 Simple decision trees
 
-- [ ] Depth of 3
-- [ ] Plot tree
-- [ ] PCA as preprocessing
+- [x] Depth of 3
+- [x] Plot tree
+- [x] PCA as preprocessing
 
 Logistic regression baseline
 

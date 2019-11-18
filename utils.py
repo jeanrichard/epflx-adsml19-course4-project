@@ -12,6 +12,7 @@ import typing as T
 # 3rd party.
 import numpy as np
 import pandas as pd
+from sklearn.base import BaseEstimator
 
 
 def load(path: os.PathLike) -> T.Mapping[str, np.ndarray]:

@@ -65,3 +65,41 @@ Small snippets and functions that were not so useful after all.
 #         path_effects.Normal()])
 
 # plt.show()
+
+# --------------------------------------------------------------------------------------------------
+
+# EstimatorFormatter = T.Callable[[BaseEstimator], str]
+
+
+# def make_estimator_formatter(keys: T.Sequence[str],
+#                              include_name: bool = True,
+#                              include_keys: bool = True) -> EstimatorFormatter:
+#     """\
+#     DOCME
+#     """
+    
+#     def estimator_formatter(estimator: BaseEstimator) -> str:
+#         if estimator is None:
+#             return str(estimator)
+#         name = type(estimator).__name__
+#         params = estimator.get_params()
+#         params_strs = [f'{key}={params[key]!r}' if include_keys else f'{params[key]!r}'
+#                          for key in keys]
+#         params_str = ', '.join(params_strs)
+#         return f'{name}({params_str})' if include_name else f'{params_str}'
+    
+#     return estimator_formatter
+
+
+# def make_estimator_multiformatter(pairs: T.Sequence[T.Tuple[BaseEstimator, EstimatorFormatter]]) -> EstimatorFormatter:
+#     """\
+#     DOCME
+#     """
+    
+#     def estimator_multiformatter(estimator: BaseEstimator) -> str:
+#         for class_, formatter in pairs:
+#             if isinstance(estimator, class_):
+#                 return formatter(estimator)
+#         return str(estimator)  # Default.
+
+#     return estimator_multiformatter
