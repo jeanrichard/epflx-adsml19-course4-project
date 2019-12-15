@@ -17,20 +17,20 @@ Simple decision trees
 
 Logistic regression baseline
 
-- [ ] Logreg performance
-- [ ] CVed grid search
-- [ ] Regularization and probs
+- [x] Logreg performance
+- [x] CVed grid search
+- [x] Regularization and probs
 
 Nonlinear classifiers
 
-- [ ] RFs performance
-- [ ] Ensemble size effect
-- [ ] Linear, RBF SVMs
+- [x] RFs performance
+- [x] Ensemble size effect
+- [x] Linear, RBF SVMs
 
 Dense network
 
-- [ ] 1-layer
-- [ ] 2-layer
+- [x] 1-layer
+- [x] 2-layer
 
 Convolutional neural network
 
