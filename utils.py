@@ -63,7 +63,10 @@ def get_class_weight(y: np.ndarray) -> T.Dict[T.Any, float]:
     return class_weight_
 
 
-def _get_or_create_results(path: os.PathLike) -> pd.DataFrame:
+DEFAULT_RESULTS_FILENAME = pathlib.Path.cwd() / 'results.csv'
+
+
+def get_or_create_results(path: os.PathLike = DEFAULT_RESULTS_FILENAME) -> pd.DataFrame:
     """\
     Returns a data-frame to hold the results of the various classifiers.
     """
@@ -72,6 +75,7 @@ def _get_or_create_results(path: os.PathLike) -> pd.DataFrame:
     except FileNotFoundError as e:
         df_results = pd.DataFrame(data={
             'name': pd.Series(dtype=str),
+            'part': pd.Series(dtype=str),
             'desc': pd.Series(dtype=str),
             'test_acc': pd.Series(dtype=float)
         })
@@ -79,15 +83,12 @@ def _get_or_create_results(path: os.PathLike) -> pd.DataFrame:
     return df_results
 
 
-DEFAULT_RESULTS_FILENAME = pathlib.Path.cwd() / 'results.csv'
-
-
-def persist_result(name: str, desc: str, test_acc: float, path: os.PathLike = DEFAULT_RESULTS_FILENAME) -> None:
+def persist_result(name: str, part: str, desc: str, test_acc: float, path: os.PathLike = DEFAULT_RESULTS_FILENAME) -> None:
     """\
     Updates the result for a given classifier (inserts a new row if needed).
     """
-    df_results = _get_or_create_results(path)
-    df_results.loc[name, ['desc', 'test_acc']] = (desc, test_acc)
+    df_results = get_or_create_results(path)
+    df_results.loc[name, ['part', 'desc', 'test_acc']] = (part, desc, test_acc)
     df_results.to_csv(path, header=True, index=True)
 
 

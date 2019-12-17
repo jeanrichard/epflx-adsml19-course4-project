@@ -1,0 +1,14 @@
+name,part,desc,test_acc
+k-NN,part-03,"scaler=None, knn__n_neighbors=7, knn__metric=minkowski, knn__p=1",0.92
+decision tree (md=3),part-04-a,max_depth=3,0.72
+pca + decision tree (md=3),part-04-b,"pca__n_components=14, dt__max_depth=3",0.78
+pca + decision tree (md=*),part-04-c,"pca__n_components=25, dt__max_depth=5",0.8
+logistic ovo/ovr/softmax,part-05-a,"strategy=ovo, C=0.01",0.92
+logistic ovr/softmax,part-05-b,"strategy=multinomial, C=0.46415888336127775",0.94
+random forest,part-06-a,"n_estimators=100, max_depth=4, class_weight=balanced",0.96
+svm linear,part-06-b,"svm_class=SVC, kernel=linear, C=0.001, class_weight=None",0.96
+svm rbf,part-06-c,"svm_class=SVC, kernel=rbf, C=10000.0, gamma=scale, class_weight=balanced",0.9
+1-layer nn,part-07-a,"dropout_rate=0.3333333333333333, l2_alpha=0.01",0.9000000047683716
+2-layer nn,part-07-b,"dropout_rate=(0.0, 0.1), hidden_n_neurons=500, l2_alpha=0.0",0.9400000023841858
+cnn,part-08-a,"input_shape=(128, 128, 3), dropout_rate=0.5, l2_alpha=0.001",0.64
+cnn-refit,part-08-b,"input_shape=(128, 128, 3), dropout_rate=0.5, l2_alpha=0.001",0.7000000011920929
