@@ -35,5 +35,5 @@ Dense network
 Convolutional neural network
 
 - [x] ConvNet performance
-- [ ] Describe results
+- [x] Describe results
 
